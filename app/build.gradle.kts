@@ -7,11 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.koreanwebtoonsentenceminer"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.example.koreanwebtoonsentenceminer"
@@ -53,7 +49,8 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
-    
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
     // Core AndroidX
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
