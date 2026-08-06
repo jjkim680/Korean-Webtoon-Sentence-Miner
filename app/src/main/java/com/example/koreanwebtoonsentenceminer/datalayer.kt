@@ -1,3 +1,5 @@
+package com.example.koreanwebtoonsentenceminer
+
 import androidx.room.ColumnInfo
 import androidx.room.Dao
 import androidx.room.Delete
@@ -49,7 +51,7 @@ data class KoreanWordFts(
 
 @Dao
 interface DictionaryDao {
-    // OnConflictStrategy.IGNORE works with our hash to silently drop duplicates
+    // OnConflictStrategy.IGNORE to silently drop duplicates
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertAll(vararg translation: Translation)
 
